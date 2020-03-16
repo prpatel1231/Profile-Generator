@@ -26,9 +26,11 @@ inquirer.prompt([
     // include username to the github api url
     const queryURL = `http://api.github.com/users/${data.username}`;
     axios.get(queryURL)
-    .then(function (res) {
+    .then(function (response) {
+        response.data.color = data.color
         // Create an HTML page using the template below and data the user input
-        var html = generateHTML(res.data,  data.color)
+        console.log(response.data);
+        var html = generateHTML(response.data)
         const conversion = convertFactory({
             converterPath: convertFactory.converters.PDF
           });

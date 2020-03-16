@@ -52,7 +52,7 @@ const colors = {
            height: 100%;
            }
            .wrapper {
-           background-color: ${colors[data.color].wrapperBackground};
+           background-color: ${colors[sata.color].wrapperBackground};
            padding-top: 100px;
            }
            body {
@@ -172,5 +172,5 @@ const colors = {
            }
         </style>`
 }
-module.export = generateHTML;
+module.exports = generateHTML;
 
